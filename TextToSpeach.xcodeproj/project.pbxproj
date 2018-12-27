@@ -10,6 +10,7 @@
 		3688BB1E409A8F5C32829E31 /* Pods_TextToSpeach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F742E0905A3FA11E2A86C8D1 /* Pods_TextToSpeach.framework */; };
 		C3234A497E50A4C72DDF76A6 /* Pods_TextToSpeachTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56867985B35B0D6124801C6 /* Pods_TextToSpeachTests.framework */; };
 		F56F48422237F8D17F11C38A /* Pods_TextToSpeachUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C04AF0648BDF10A447BB52 /* Pods_TextToSpeachUITests.framework */; };
+		FF3430C721D3EAFF0054548A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3430C621D3EAFF0054548A /* File.swift */; };
 		FF5AA68121D028D200A0994A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AA68021D028D200A0994A /* AppDelegate.swift */; };
 		FF5AA68821D028D400A0994A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5AA68721D028D400A0994A /* Assets.xcassets */; };
 		FF5AA69621D028D500A0994A /* TextToSpeachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AA69521D028D500A0994A /* TextToSpeachTests.swift */; };
@@ -19,6 +20,7 @@
 		FF5AA6B721D02B4500A0994A /* SpeachTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AA6B621D02B4500A0994A /* SpeachTextVC.swift */; };
 		FF5AA6B921D02BB400A0994A /* SentenceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AA6B821D02BB400A0994A /* SentenceTableCell.swift */; };
 		FF5AA6BB21D02BD400A0994A /* AudioServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5AA6BA21D02BD400A0994A /* AudioServer.swift */; };
+		FF77FB6121D4DDE5001C3B44 /* Siri.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77FB6021D4DDE5001C3B44 /* Siri.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		EF1799A5C562AE9113B4D9BF /* Pods-TextToSpeachUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextToSpeachUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextToSpeachUITests/Pods-TextToSpeachUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F742E0905A3FA11E2A86C8D1 /* Pods_TextToSpeach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextToSpeach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C04AF0648BDF10A447BB52 /* Pods_TextToSpeachUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextToSpeachUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3430C621D3EAFF0054548A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FF5AA67D21D028D200A0994A /* TextToSpeach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextToSpeach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5AA68021D028D200A0994A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5AA68721D028D400A0994A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		FF5AA6B621D02B4500A0994A /* SpeachTextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeachTextVC.swift; sourceTree = "<group>"; };
 		FF5AA6B821D02BB400A0994A /* SentenceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTableCell.swift; sourceTree = "<group>"; };
 		FF5AA6BA21D02BD400A0994A /* AudioServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioServer.swift; sourceTree = "<group>"; };
+		FF77FB6021D4DDE5001C3B44 /* Siri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Siri.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				FF5AA6B421D02B2D00A0994A /* Sentence.swift */,
+				FF77FB6021D4DDE5001C3B44 /* Siri.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			children = (
 				FF5AA6B621D02B4500A0994A /* SpeachTextVC.swift */,
 				FF5AA6B821D02BB400A0994A /* SentenceTableCell.swift */,
+				FF3430C621D3EAFF0054548A /* File.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -429,7 +435,9 @@
 			files = (
 				FF5AA6B321D02B1600A0994A /* Extension.swift in Sources */,
 				FF5AA6B521D02B2D00A0994A /* Sentence.swift in Sources */,
+				FF3430C721D3EAFF0054548A /* File.swift in Sources */,
 				FF5AA6B721D02B4500A0994A /* SpeachTextVC.swift in Sources */,
+				FF77FB6121D4DDE5001C3B44 /* Siri.swift in Sources */,
 				FF5AA68121D028D200A0994A /* AppDelegate.swift in Sources */,
 				FF5AA6B921D02BB400A0994A /* SentenceTableCell.swift in Sources */,
 				FF5AA6BB21D02BD400A0994A /* AudioServer.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 class SpeachTextVC: UIViewController {
-    
+    let siri = Siri()
     
     func updateTableContentInset() {
         let numRows = tableView(self.tableView, numberOfRowsInSection: 0)
@@ -75,7 +75,7 @@ class SpeachTextVC: UIViewController {
         setupTimer()
         
         AudioServer.share.setupSpeech { (success) in
-            //
+  
         }
     }
     
@@ -149,18 +149,20 @@ class SpeachTextVC: UIViewController {
     
     @objc func checkVoiceText() {
         if AudioServer.share.audioEngine.isRunning {
+          
             if let newText = self.textView.text, !newText.isEmpty, newText == self.lastText { // finished
+                
                 print("[TIMER] 1. timeup, textView.text = \(newText), lastText = \(self.lastText)")
                 //self.micphonButtonTapped() // stop recording
                 self.sentences.append(Sentence(string: newText))
                 self.tableViewReloadData()
-                
-                self.textView.text = ""
+                siri.siriSpeak(theText: newText)
+          
                 //self.micphonButtonTapped() // start recording again
-                
             } else {
                 self.lastText = self.textView.text
             }
+     
         } else {
             //print("[TIMER] 0. AudioEngine is NOT running.")
         }
@@ -189,10 +191,12 @@ extension SpeachTextVC {
             micphoneButton.setImage(#imageLiteral(resourceName: "micphone"), for: .normal)
             pulsatingLayer.fillColor = UIColor.orange.cgColor
             lastText = ""
+            self.textView.text = ""
         } else {
             print("[AUDIO] ------ start ------")
             AudioServer.share.startRecording(completion: { (isFinal, getText) in
                 self.textView.text = getText
+            
             })
             micphoneButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             pulsatingLayer.fillColor = UIColor.yellow.cgColor
